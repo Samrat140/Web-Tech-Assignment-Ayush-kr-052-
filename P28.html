@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swap Example</title>
+    <script>
+        function swapImage(imgElement, newSrc) {
+            imgElement.src = newSrc;
+        }
+
+        function restoreImage(imgElement, originalSrc) {
+            imgElement.src = originalSrc;
+        }
+    </script>
+</head>
+<body>
+    <h2>Hover over the image to swap</h2>
+    <img src="Mypic.jpg" 
+         alt="Original Image"
+         onmouseover="swapImage(this, 'image2.jpg')" 
+         onmouseout="restoreImage(this, 'image1.jpg')" 
+         width="300">
+</body>
+</html>
